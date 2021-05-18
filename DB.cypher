@@ -11,20 +11,20 @@
 //***************** INCIO DEL PROGRAMA *****************
 
 // Nodos de Restaurante
-CREATE (PuertoBarrios:Resturante {nombre:'Puerto Barrios', famoso: "Mariscos Frescos"})
-CREATE (LaBerna:Resturante {nombre:'La Berna Reeves', famoso: "Pan dulce"})
-CREATE (TacoBell:Resturante {nombre:'Taco Bell', famoso: "Chalupas"})
-CREATE (CielitoLindo:Resturante {nombre:'Cielito Lindo', famoso: "Tacos de CichinitaPibill"})
+CREATE (PuertoBarrios:Resturante {name:'Puerto Barrios', famoso: "Mariscos Frescos"})
+CREATE (LaBerna:Resturante {name:'La Berna Reeves', famoso: "Pan dulce"})
+CREATE (TacoBell:Resturante {name:'Taco Bell', famoso: "Chalupas"})
+CREATE (CielitoLindo:Resturante {name:'Cielito Lindo', famoso: "Tacos de CichinitaPibill"})
 
 // Nodos de Ubicacion
-CREATE (Z10:Ubicacion {zona: 10})
-CREATE (Z9:Ubicacion {zona: 9})
-CREATE (Z15:Ubicacion {zona: 15})
-CREATE (Z11:Ubicacion {zona: 11})
+CREATE (Z10:Ubicacion {name: 'Zona 10',zona: 10})
+CREATE (Z9:Ubicacion {name: 'Zona 9', zona: 9})
+CREATE (Z15:Ubicacion {name: 'Zona 15', zona: 15})
+CREATE (Z11:Ubicacion {name: 'Zona 11',zona: 11})
 
 // Nodos de Rating
-CREATE (R4:Rating {stars: 4})
-CREATE (R6:Rating {stars: 6})
+CREATE (R4:Rating {name: 'Ranking 4', stars: 4})
+CREATE (R6:Rating {name: 'Ranking 6', stars: 6})
 
 // Relaciones de ubicacion
 CREATE
@@ -36,8 +36,8 @@ CREATE
 (LaBerna)-[:CERCA {}]->(Z10),
 (LaBerna)-[:CERCA {}]->(Z15),
 
-(PueroBarrios)-[:CERCA {}]->(Z10),
-(PueroBarrios)-[:CERCA {}]->(Z9),
+(PuertoBarrios)-[:CERCA {}]->(Z10),
+(PuertoBarrios)-[:CERCA {}]->(Z9),
 
 (CielitoLindo)-[:CERCA {}]->(Z11),
 (CielitoLindo)-[:CERCA {}]->(Z9)
@@ -46,5 +46,5 @@ CREATE
 CREATE
 (TacoBell)-[:Calificacion {}]->(R4),
 (LaBerna)-[:Calificacion {}]->(R6),
-(PueroBarrios)-[:Calificacion {}]->(R6),
+(PuertoBarrios)-[:Calificacion {}]->(R6),
 (CielitoLindo)-[:Calificacion {}]->(R4)
