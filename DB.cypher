@@ -396,6 +396,7 @@ CREATE
 (Z2)-[:CERCA {}]->(Z6),
 (Z2)-[:CERCA {}]->(Z1),
 (Z2)-[:CERCA {}]->(Z3),
+(Z2)-[:CERCA {}]->(Z18),
 
 // Relaciones: Zona 3
 (Z3)-[:CERCA {}]->(Z1),
@@ -420,6 +421,7 @@ CREATE
 (Z6)-[:CERCA {}]->(Z2),
 (Z6)-[:CERCA {}]->(Z1),
 (Z6)-[:CERCA {}]->(Z5),
+(Z6)-[:CERCA {}]->(Z18),
 
 // Relaciones: Zona 7
 (Z7)-[:CERCA {}]->(Z3),
@@ -436,11 +438,14 @@ CREATE
 (Z9)-[:CERCA {}]->(Z8),
 (Z9)-[:CERCA {}]->(Z12),
 (Z9)-[:CERCA {}]->(Z13),
+(Z9)-[:CERCA {}]->(Z10),
 
 // Relaciones: Zona 10
 (Z10)-[:CERCA {}]->(Z5),
 (Z10)-[:CERCA {}]->(Z9),
 (Z10)-[:CERCA {}]->(Z14),
+(Z10)-[:CERCA {}]->(Z15),
+
 
 // Relaciones: Zona 11
 (Z11)-[:CERCA {}]->(Z8),
@@ -470,8 +475,6 @@ CREATE
 // Relaciones: Zona 16
 (Z16)-[:CERCA {}]->(Z17),
 (Z16)-[:CERCA {}]->(Z15),
-(Z16)-[:CERCA {}]->(Z5),
-(Z16)-[:CERCA {}]->(Z6),
 
 // Relaciones: Zona 17
 (Z17)-[:CERCA {}]->(Z16),
